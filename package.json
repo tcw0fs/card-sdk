@@ -1,0 +1,25 @@
+{
+  "name": "card-sdk",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/card-sdk.umd.cjs",
+  "module": "./dist/card-sdk.js",
+  "exports": {
+    ".": {
+      "import": "./dist/card-sdk.js",
+      "require": "./dist/card-sdk.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.3"
+  }
+}
