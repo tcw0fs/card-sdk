@@ -1,5 +1,5 @@
-import CardSDK from './main';
+import FoolsMoneyCore from './main';
 
-const cardSDK = new CardSDK();
+const foolsMoneyCore = new FoolsMoneyCore();
 
-cardSDK.init();
+foolsMoneyCore.init();

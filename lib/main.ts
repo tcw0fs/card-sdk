@@ -1,18 +1,18 @@
 const DEFAULT_EVENT_S = 5;
 const DEFAULT_TICK_MS = 1000;
 
-interface SDKConfig {
+interface CoreConfig {
   eventSeconds?: number;
 }
 
-export default class CardSDK {
+export default class FoolsMoneyCore {
   private interval: ReturnType<typeof setInterval> | null = null;
   private passedTime: number = 0;
   private eventMs: number = DEFAULT_EVENT_S * 1000;
 
   constructor(
     {} = {},
-    { eventSeconds = DEFAULT_EVENT_S }: SDKConfig = {
+    { eventSeconds = DEFAULT_EVENT_S }: CoreConfig = {
       eventSeconds: DEFAULT_EVENT_S,
     }
   ) {
