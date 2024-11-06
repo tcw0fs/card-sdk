@@ -1,15 +1,17 @@
 {
-  "name": "card-sdk",
+  "name": "fools-money-core",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "files": ["dist"],
-  "main": "./dist/card-sdk.umd.cjs",
-  "module": "./dist/card-sdk.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/fools-money-core.umd.cjs",
+  "module": "./dist/fools-money-core.js",
   "exports": {
     ".": {
-      "import": "./dist/card-sdk.js",
-      "require": "./dist/card-sdk.umd.cjs"
+      "import": "./dist/fools-money-core.js",
+      "require": "./dist/fools-money-core.umd.cjs"
     }
   },
   "scripts": {
