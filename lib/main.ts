@@ -1,26 +1,15 @@
 const DEFAULT_EVENT_S = 5;
-const DEFAULT_TICK_MS = 1000;
-
-interface CoreConfig {
-  eventSeconds?: number;
-}
+const DEFAULT_TICK_MS = 100;
 
 export default class FoolsMoneyCore {
   private interval: ReturnType<typeof setInterval> | null = null;
   private passedTime: number = 0;
   private eventMs: number = DEFAULT_EVENT_S * 1000;
 
-  constructor(
-    {} = {},
-    { eventSeconds = DEFAULT_EVENT_S }: CoreConfig = {
-      eventSeconds: DEFAULT_EVENT_S,
-    }
-  ) {
-    this.eventMs = ~~eventSeconds * 1000;
-  }
+  constructor() {}
 
   init() {
-    this.interval = setInterval(() => this.loop(), DEFAULT_TICK_MS);
+    // this.interval = setInterval(() => this.loop(), DEFAULT_TICK_MS);
   }
 
   private loop() {
